@@ -2,6 +2,7 @@ body {
  margins:auto;
  width:80%;
 }
+<<<<<<< HEAD
 li{
   display: inline;
   padding: 10px;
@@ -14,6 +15,11 @@ ul{
 header, section, article,
 aside,
 footer, div, nav {
+=======
+header, section, article,
+ nav, aside,
+footer, div {
+>>>>>>> f0c8cf4f926a9f64a1a02630666a849be571f4a2
  font-family: sans-serif;
  border: 1px dotted #000;
  padding: 10px;
