@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Facebook for Cats!</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script>
+  function testResults(form){
+    // simple script to pop-up form values after submission
+    // grab form element values and store as variables
+    var username = form.username.value;
+    var breed = form.breed.value;
+    var email = form.email.value;
+    var homepage = form.homepage.value;
+    var dob = form.dob.value;
+    var about = form.about.value;
+
+    alert ("You registered: " + username + ", ");
+  }
+  </script>
+</head>
+<body>
+  <h1>Moggybook!</h1>
+  <form>
+    <table border="0" cellspacing="5" cellpadding="5">
+      <tr>
+        <td>Username:</td>
+        <td>
+        <input type="textarea" name="username">
+      </td>
+    </tr>
+    <tr>
+      <td>breed:</td>
+      <td>
+      <input type="textarea" name="breed">
+    </td>
+  </tr>
+  <tr>
+    <td>email:</td>
+    <td>
+    <input type="email" name="email">
+  </td>
+</tr>
+<tr>
+  <td>homepage:</td>
+  <td>
+  <input type="textarea" name="homepage">
+</td>
+</tr>
+<tr>
+  <td>date of birth:</td>
+  <td>
+  <input type="date" name="dob">
+</td>
+</tr>
+<tr>
+  <td>about:</td>
+  <td>
+  <input type="textarea" name="about">
+</td>
+</tr>
+</table>
+<input type="submit" name="submit" value="Submit"
+onClick="testResults(this.form)" />
+</form>
+</body>
+</html>
