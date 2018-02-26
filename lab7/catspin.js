@@ -14,4 +14,8 @@ function animate(time) {
 }
 requestAnimationFrame(animate);
 
+document.getElementById("catpic").addEventListener("click", output);
 
+function output() {
+    console.log(Date());
+}
