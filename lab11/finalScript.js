@@ -29,7 +29,13 @@ function addResultTitles(jsondata){
   // iterate throguh the collection
   for(var i=0; i<10; i++){
     var title = jsondata.Search[i].Title;
-    htmlstring += "<li>" + title + "</li>";
+    var year = jsondata.Search[i].Year;
+    var type = jsondata.Search[i].Type;
+    var img = jsondata.Search[i].Poster;
+    var imdb = "http://www.imdb.com/title/" + jsondata.Search[i].imdbID;
+    htmlstring += "<li>" + title + "/" + year + "/" + type + "/" +
+    "<a href=" + imdb + ">IMDB Page</a></li>";
+    htmlstring += "<img src=" + img + " />";
   }
   // inject html into the empty list
   $("#results").html(htmlstring);
