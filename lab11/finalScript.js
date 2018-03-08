@@ -33,12 +33,9 @@ function addResultTitles(jsondata){
     var type = jsondata.Search[i].Type;
     var img = jsondata.Search[i].Poster;
     var imdb = "http://www.imdb.com/title/" + jsondata.Search[i].imdbID;
-<<<<<<< HEAD
     htmlstring += "<li>" + title + "/" + year + "/" + type + "/" +
     "<a href=" + imdb + ">IMDB Page</a></li>";
-=======
     htmlstring += "<li>" + title + "/" + year + "/" + type + "/" + "<a href=" + imdb + ">IMDB Page</a></li>";
->>>>>>> 6cd1eae12d97bb225868705d670fd7bf184da370
     htmlstring += "<img src=" + img + " />";
   }
   // inject html into the empty list
