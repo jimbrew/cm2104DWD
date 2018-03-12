@@ -24,5 +24,5 @@ app.get('/calc', function(req, res) {
   if(calc == "sub"){res.send("X - Y =" + (x - y));}
   if(calc == "mul"){res.send("X * Y =" + (x * y));}
   if(calc == "div"){res.send("X / Y =" + (x / y));}
-});
+);
 app.listen(8080);
