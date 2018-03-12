@@ -19,7 +19,7 @@ app.get('/add', function(req, res) {
 app.get('/calc', function(req, res) {
   var x = parseInt(req.query.x);
   var y = parseInt(req.query.y);
-  var calc = req.query;
+  var calc = req.query.calc;
   if(calc == "add"){res.send("X + Y =" + (x + y));}
   if(calc == "sub"){res.send("X - Y =" + (x - y));}
   if(calc == "mul"){res.send("X * Y =" + (x * y));}
