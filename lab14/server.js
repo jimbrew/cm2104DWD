@@ -11,23 +11,15 @@ var client = new Twitter({
 
 app.use(express.static('public'))
 
-app.get('/', function(req, res) {
-      var params = {
-        screen_name: 'nodejs'
-      };
+app.get('/', function(req, res){
+  var params = {screen_name: 'nodejs'};
 
-      client.get('statuses/user_timeline', params, function(error, tweets, response) {
-          if (!error) {
-            var output = "";
-            for (var t = 0; t < tweets.length; t++) {
-              output += "<div>";
-              output += "<h2>" + tweets[t].screen_name + "</h2>";
-              output += "<p>" + tweets[t].text + "</p>";
-              output += "</div>";
-            }
-          });
+  client.get('statuses/user_timeline', params, function(error, tweets, response){
+    if (!error) {
+      res.send(tweets);
+    }
+  });
+  //res.send("hello world by express");
+});
 
-        res.send("hello world by express");
-      });
-
-    app.listen(8080);
+app.listen(8080);
