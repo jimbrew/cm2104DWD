@@ -9,17 +9,17 @@ var client = new Twitter({
   access_token_secret: 'b3GbdKPrFzgq2kHh6AZqEyiUMtxWgyX1j1nYnvzQzlqDl'
 });
 
-var params = {screen_name: 'node.js'};
-
-client.get('statuses/user_timeline', params, function(error, tweets, response){
-  if (!error) {
-    console.log(tweets);
-  }
-});
-
 app.use(express.static('public'))
 
 app.get('/', function(req, res){
+  var params = {screen_name: 'node.js'};
+
+  client.get('statuses/user_timeline', params, function(error, tweets, response){
+    if (!error) {
+      console.log(tweets);
+    }
+  });
+
   res.send("hello world by express");
 });
 
