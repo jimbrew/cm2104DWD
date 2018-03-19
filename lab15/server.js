@@ -62,5 +62,3 @@ app.post('/search', function(req, res){
     res.send(output);
   });
 });
-
-/*comment
