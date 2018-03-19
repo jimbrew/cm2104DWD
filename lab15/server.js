@@ -39,6 +39,14 @@ if(err) throw err;
   });
 });
 
+app.post('/delete', function(req, res) {
+  db.collection('quotes').deleteOne(req.body, function(err, result) {
+if(err) throw err;
+    console.log('removed from database');
+    res.redirect('/');
+  });
+});
+
 app.post('/search', function(req, res){
   db.collection('quotes').find(req.body).toArray(function(err, result){
     if(err) throw err;
