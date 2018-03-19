@@ -39,7 +39,7 @@ if(err) throw err;
   });
 });
 
-app.get('/search', function(req, res){
+app.post('/search', function(req, res){
   db.collection('quotes').find(req.body).toArray(function(err, result){
     if(err) throw err;
 
