@@ -62,3 +62,13 @@ app.post('/search', function(req, res){
     res.send(output);
   });
 });
+
+app.post('/update', function(req, res) {
+var query = {quote: req.body.quote};
+var newvalues = {$set: {name: req.body.newname, quote: req.body.newquote}};   
+  db.collection('quotes').updateOne(query,newvalues function(err, result) {
+if(err) throw err;
+    console.log('changed the database');
+    res.redirect('/');
+  });
+});
